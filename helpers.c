@@ -1,4 +1,5 @@
-#include <stdio.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include "./includes/stack.h" 
 #include "./includes/helpers.h"
 
@@ -6,7 +7,7 @@ void
 display_stack(struct stack* stack)
 {
 	struct node* aux = stack->end;
-  system("clear"); 
+  system("clear");
   printf("[YOUR STACK HERE]\n");
 	if(stack->base == NULL || stack->size == 0)
   {
