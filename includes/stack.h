@@ -20,5 +20,6 @@ struct node* new_node(int);
 // Operation methods
 void push(struct stack*, int);
 void pop(struct stack*);
+void free_stack(struct stack*);
 
 #endif

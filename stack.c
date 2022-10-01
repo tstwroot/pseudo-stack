@@ -70,3 +70,20 @@ pop(struct stack *stack)
   }
   stack->size--;
 }
+
+void
+free_stack(struct stack* stack)
+{
+  if(stack->size == 0 || stack->base == NULL)
+  {
+    return;
+  }
+
+  struct node* aux = stack->end;
+  while(aux != stack->base)
+  {
+    aux = aux->back;
+    free(aux->next);
+  }
+  free(aux);
+}

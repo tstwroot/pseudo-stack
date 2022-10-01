@@ -37,4 +37,5 @@ int main(void)
     op = 0;
     value = 0;
   }
+  free_stack(stack);
 }
