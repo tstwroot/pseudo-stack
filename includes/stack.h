@@ -7,10 +7,15 @@ struct node
   struct node *next, *back;
 };
 
-struct stack
+struct dinamic_stack
 {
-  int size;
+  long int size, top;
   struct node *base, *end;
+};
+
+struct static_stack
+{
+  long int capacity, *data, top;
 };
 
 // Creation methods

@@ -4,7 +4,7 @@
 struct stack*
 new_stack()
 {
-  struct stack* stack = (struct stack*)malloc(sizeof(struct stack));
+  struct dinamic_stack* stack = (struct dinamic_stack*)malloc(sizeof(struct dinamic_stack));
   stack->base = NULL;
   stack->end = NULL;
   stack->size = 0;
@@ -22,7 +22,7 @@ new_node(int value)
 }
 
 void
-push(struct stack *stack, int value)
+push(struct dinamic_stack *stack, int value)
 {
   struct node* newnode = new_node(value);
   if(stack->size == 0 || stack->base == NULL)
@@ -44,7 +44,7 @@ push(struct stack *stack, int value)
 }
 
 void
-pop(struct stack *stack)
+pop(struct dinamic_stack *stack)
 {
   if(stack->size == 0 || stack->base == NULL)
   {
@@ -72,7 +72,7 @@ pop(struct stack *stack)
 }
 
 void
-free_stack(struct stack* stack)
+free_stack(struct dinamic_stack* stack)
 {
   if(stack->size == 0 || stack->base == NULL)
   {
